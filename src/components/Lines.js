@@ -16,7 +16,7 @@ const cubejsApi = cubejs(process.env.REACT_APP_CUBEJS_TOKEN, {
   apiUrl: process.env.REACT_APP_API_URL,
 });
 
-const dateFormatter = (item) => moment(item).format("MMM YY");
+const dateFormatter = (item) => moment(item).format("MMM YYYY");
 
 export default function Lines() {
   return (
@@ -36,7 +36,6 @@ export default function Lines() {
         if (!resultSet) {
           return "Loading...";
         }
-        console.log(resultSet);
 
         return (
           <div className="p-5 flex space-x-5 mx-auto px-4 sm:px-6 lg:px-8 rounded-lg bg-white overflow-hidden shadow space-y-4">
